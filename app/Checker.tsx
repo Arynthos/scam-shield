@@ -104,8 +104,8 @@ function drawShareCard(scamType: string, site: string): HTMLCanvasElement {
   ctx.fillStyle = "#fff";
   ctx.font = "700 46px system-ui, sans-serif";
   ctx.fillText("SCAM ALERT", 80, 140);
-  ctx.font = "700 84px Georgia, serif";
-  let y = wrap(ctx, scamType, 80, 280, 920, 100);
+  ctx.font = "700 76px Georgia, serif";
+  let y = wrap(ctx, scamType, 80, 260, 920, 90);
   ctx.font = "500 44px system-ui, sans-serif";
   y = wrap(ctx, "A message like this is going around. Please don't fall for it.", 80, y + 30, 920, 60);
   ctx.font = "600 42px system-ui, sans-serif";
@@ -118,7 +118,7 @@ function drawShareCard(scamType: string, site: string): HTMLCanvasElement {
     y = wrap(ctx, tip, 140, y + 40, 860, 56) + 10;
   }
   ctx.font = "500 36px system-ui, sans-serif";
-  ctx.fillText(`Checked with Scam Shield  ·  ${site}`, 80, 1000);
+  ctx.fillText(`Checked with Scam Shield  ·  ${site}`, 80, 1040);
   return c;
 }
 
