@@ -310,7 +310,7 @@ export default function Checker() {
 
           {shownText && result.flags.some((f) => f.quote) && (
             <>
-              <h3>What gave it away</h3>
+              <h3>{result.verdict === "scam" || result.verdict === "suspicious" ? "What gave it away" : "What we noticed"}</h3>
               <p className="msg" dir="auto">
                 {segments(shownText, result.flags).map((s, i) => s.sev ? <mark key={i} className={`m-${s.sev}`}>{s.t}</mark> : <span key={i}>{s.t}</span>)}
               </p>
